@@ -79,6 +79,20 @@ form input:focus{
     margin: 0 -3px 0 3px;
 }
 
+.select-box select::-webkit-scrollbar{
+    width: 8px;
+}
+
+.select-box select::-webkit-scrollbar-track{
+    background: white;
+}
+
+.select-box select::-webkit-scrollbar-thumb{
+    background: rgb(182, 182, 182);
+    border-radius: 5px;
+    border-right: 1px solid white;
+}
+
 .select-box img{
     max-width: 25px;
 }
