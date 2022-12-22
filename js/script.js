@@ -2,6 +2,7 @@ const dropList =  document.querySelectorAll(".drop-list select");
 const fromCurrency =  document.querySelector(".from select");
 const toCurrency =  document.querySelector(".to select");
 const getBtn = document.querySelector("form button");
+const exchangeIcon = document.querySelector(".drop-list .icon");
 
 for (let i = 0; i < dropList.length; i++) {
     for(currency_code in country_code){
@@ -41,6 +42,15 @@ getBtn.addEventListener("click", e => {
     getExchangeRate();
 });
 
+exchangeIcon.addEventListener("click", () => {
+    let tempChange = fromCurrency.value;
+    fromCurrency.value = toCurrency.value;
+    toCurrency.value = tempChange;
+    loadFlag(fromCurrency);
+    loadFlag(toCurrency);
+    getExchangeRate();
+});
+
 function getExchangeRate(){
     const amount = document.querySelector(".amount input");
     exchangeRateTxt = document.querySelector(".exchange-rate");
@@ -58,5 +68,7 @@ function getExchangeRate(){
         let exchangeRate = result.conversion_rates[toCurrency.value];
         let totalExchangeRate = (amountValue * exchangeRate).toFixed(2);
         exchangeRateTxt.innerText = `${amountValue} ${fromCurrency.value} = ${totalExchangeRate} ${toCurrency.value}`;
+    }).catch(() => {
+        exchangeRateTxt.innerText = 'Algo deu errado.';
     });
 }
