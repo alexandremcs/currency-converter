@@ -13,7 +13,7 @@
   
 ## Deploy do projeto
 
-- [Acesse o deploy](https://currency-converter-roan-seven.vercel.app/)
+- [Acesse o deploy](https://63a5044c3be54902469a8061--fascinating-choux-30fe74.netlify.app/)
 
 ## Descrição do Projeto
 
