@@ -4,6 +4,16 @@ const toCurrency =  document.querySelector(".to select");
 const getBtn = document.querySelector("form button");
 const exchangeIcon = document.querySelector(".drop-list .icon");
 
+function loadFlag(element){
+    for (code in country_code){
+        if (code == element.value){
+            let imgTag = element.parentElement.querySelector("img");
+            let countryFlag = country_code[code].toString().toLowerCase()
+            imgTag.src = `https://flagicons.lipis.dev/flags/4x3/${countryFlag}.svg`;
+        }
+    }
+}
+
 for (let i = 0; i < dropList.length; i++) {
     for(currency_code in country_code){
         
@@ -21,16 +31,6 @@ for (let i = 0; i < dropList.length; i++) {
     dropList[i].addEventListener("change", e => {
         loadFlag(e.target);
     });   
-}
-
-function loadFlag(element){
-    for (code in country_code){
-        if (code == element.value){
-            let imgTag = element.parentElement.querySelector("img");
-            let countryFlag = country_code[code].toString().toLowerCase()
-            imgTag.src = `https://flagicons.lipis.dev/flags/4x3/${countryFlag}.svg`;
-        }
-    }
 }
 
 window.addEventListener("load", () => {

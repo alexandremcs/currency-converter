@@ -12,7 +12,11 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: rgb(255, 199, 46);
+    background-image:    url(assets/img/exchange-bg.jpg);
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;              /* optional, center the image */
+    background-color: rgb(255, 199, 46);
 }
 
 .wrapper {
