@@ -17,7 +17,7 @@
 
 ## Descrição do Projeto
 
-Projeto utilizando Vanilla Javascript. A ideia foi desenvolver uma aplicação de conversão de moedas com as cotações sendo passadas de forma atualizada pela API do exchangerate-api.com .  
+Projeto utilizando Vanilla Javascript. A ideia foi desenvolver uma aplicação de conversão de moedas com as cotações sendo passadas de forma atualizada pela API do exchangerate-api.com . A aplicação também carrega dinamicamente as bandeiras dos países.  
 
 ## Status do Projeto
 
